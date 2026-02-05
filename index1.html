@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>John F. Kennedy</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* FONDO DE ESTADOS UNIDOS */
+body{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl1ZekJylHHHl8p05tAF6svh1QLEyyeegybQ&s");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* OVERLAY PARA DAR VIDA */
+.overlay{
+    min-height:100vh;
+    background: rgba(0, 32, 91, 0.65);
+    padding:30px 0;
+}
+
+/* CONTENEDOR */
+.container{
+    max-width:1200px;
+    margin:auto;
+    background:;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 20px 50px rgba(0,0,0,0.5);
+}
+
+/* HEADER */
+header{
+    background:#00205b;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 30px;
+}
+
+header h1{
+    letter-spacing:4px;
+}
+
+header input{
+    padding:10px 18px;
+    border-radius:30px;
+    border:none;
+}
+
+/* NAV */
+nav{
+    background:#bf0a30;
+    padding:15px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+nav button{
+    border:none;
+    padding:10px 25px;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav button:hover{
+    background:#00205b;
+    color:white;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:45px 25px;
+}
+
+.hero img{
+    width:70%;
+    max-width:480px;
+    border-radius:15px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.35);
+}
+
+.hero p{
+    margin-top:25px;
+    font-size:22px;
+    font-style:italic;
+    color:#000;
+}
+
+/* ICONOS */
+.icons{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    padding:15px;
+    background:#f0f0f0;
+    font-size:22px;
+}
+
+/* MAIN */
+main{
+    display:flex;
+    gap:30px;
+    padding:40px;
+}
+
+/* TEXTO */
+.left{
+    flex:2;
+}
+
+.section{
+    background:#fff;
+    padding:25px;
+    margin-bottom:25px;
+    border-left:6px solid #00205b;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.section h2{
+    margin-bottom:10px;
+    color:#00205b;
+}
+
+/* IMÁGENES */
+.right{
+    flex:1;
+}
+
+.card{
+    margin-bottom:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.card img{
+    width:100%;
+    display:block;
+}
+
+/* FOOTER */
+footer{
+    background:#00205b;
+    color:white;
+    text-align:center;
+    padding:18px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    main{
+        flex-direction:column;
+    }
+    .hero img{
+        width:90%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+<div class="container">
+
+<header>
+    <h1>J F K</h1>
+    <input type="text" placeholder="Buscar...">
+</header>
+
+<nav>
+    <button onclick="go('inicio')">Inicio</button>
+    <button onclick="go('bio')">Biografía</button>
+    <button onclick="go('presidencia')">Presidencia</button>
+    <button onclick="go('legado')">Legado</button>
+</nav>
+
+<section class="hero" id="inicio">
+    <video controls width="600">
+    <source src="jfk.mp4" type="video/mp4">
+  
+</video>
+    <p>
+        “La Humanidad tiene que poner fin a la guerra o la guerra pondrá fin a la Humanidad”.
+    </p>
+</section>
+
+<div class="icons">
+    <span>F</span>
+    <span>X</span>
+    <span onclick="window.print()">🖨</span>
+    <span>✉</span>
+</div>
+
+<main>
+    <div class="left">
+        <div class="section" id="bio">
+            <h2>Biografía</h2>
+            <p>
+                John F. Kennedy nació en Massachusetts y desde joven mostró un fuerte interés
+                por el liderazgo y el servicio público. Estudió en Harvard y sirvió en la
+                Marina durante la Segunda Guerra Mundial.
+            </p>
+        </div>
+
+        <div class="section" id="presidencia">
+            <h2>Presidencia</h2>
+            <p>
+                Kennedy representó una nueva generación de líderes. Defendió los derechos
+                civiles, impulsó la ciencia y buscó siempre la paz mundial.
+            </p>
+        </div>
+
+        <div class="section" id="legado">
+            <h2>Legado</h2>
+            <p>
+                Su mensaje de esperanza, servicio y responsabilidad sigue inspirando al
+                mundo hasta hoy.
+            </p>
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="card">
+            <img src="">
+        </div>
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRG7vC9yNr3GPyvBzr_ehzMjamT5_sBPBKEw&s">
+        </div>
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ7B5OibY5VwExQn1RqBkrSpeF5Zj9ph4pfA&s">
+        </div>
+    </div>
+</main>
+
+<footer>
+    Página principal — John F. Kennedy
+</footer>
+
+</div>
+</div>
+
+<script>
+function go(id){
+    document.getElementById(id).scrollIntoView({behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>
